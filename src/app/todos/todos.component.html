@@ -1,7 +1,10 @@
 <h1>{{title}} ({{getTodosByStatus(true).length}} / {{todoItems.length}})</h1>
 
 <md-list >
-  <md-list-item *ngFor="let todoItem of todoItems">
-    <app-todo  [todoItem]="todoItem"></app-todo>
+  <md-list-item *ngFor="let todoItem of todoItems; let i = index">
+    <app-todo
+      [todoItem]="todoItem"
+      [index]="i"
+    ></app-todo>
   </md-list-item>
 </md-list>
