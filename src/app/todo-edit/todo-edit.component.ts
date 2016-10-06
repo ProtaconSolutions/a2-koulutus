@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TodoService } from '../todo.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class TodoEditComponent implements OnInit {
   private name: string = '';
   private assignee: string = '';
 
-  constructor(private route: ActivatedRoute, private todoService: TodoService) { }
+  constructor(private route: ActivatedRoute, private todoService: TodoService, private router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe((parameters: any) => {
@@ -30,5 +30,7 @@ export class TodoEditComponent implements OnInit {
   save() {
     this.todoItem.name = this.name;
     this.todoItem.assignee = this.assignee;
+
+    this.router.navigateByUrl('/todos');
   }
 }
