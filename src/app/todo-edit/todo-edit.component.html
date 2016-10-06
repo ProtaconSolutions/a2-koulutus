@@ -1,17 +1,19 @@
-<p>
+<form #todoEditForm="ngForm" (submit)="save()" novalidate>
     Index: {{index}}
 
-    <md-input placeholder="Todo item" [(ngModel)]="todoItem.name"></md-input>
+    <md-input name="name" placeholder="Todo item" [(ngModel)]="name"></md-input>
 
     <br />
 
     Assignee:
 
-    <md-input placeholder="Assignee" [(ngModel)]="todoItem.assignee"></md-input>
+    <md-input name="assignee" placeholder="Assignee" [(ngModel)]="assignee"></md-input>
 
     <br />
+
+    <button type="submit" md-raised-button color="primary">Save todo item</button>
 
     <button md-raised-button color="primary"
         [routerLink]="['/todos']"
     >Back to todo list</button>
-</p>
+</form>

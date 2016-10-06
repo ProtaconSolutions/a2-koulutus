@@ -11,6 +11,8 @@ import {TodoService} from "../todo.service";
 export class TodoEditComponent implements OnInit {
   private index: number;
   private todoItem: any;
+  private name: string = '';
+  private assignee: string = '';
 
   constructor(private route: ActivatedRoute, private todoService: TodoService) { }
 
@@ -19,6 +21,14 @@ export class TodoEditComponent implements OnInit {
       this.index = parameters.index;
 
       this.todoItem = this.todoService.getTodoItemByIndex(this.index);
+
+      this.name = this.todoItem.name;
+      this.assignee = this.todoItem.assignee;
     });
+  }
+
+  save() {
+    this.todoItem.name = this.name;
+    this.todoItem.assignee = this.assignee;
   }
 }
