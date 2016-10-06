@@ -3,15 +3,21 @@
 
     <md-input name="name" placeholder="Todo item" required
         [(ngModel)]="name"
+        #nameControl="ngModel"
     ></md-input>
+
+    <div *ngIf="nameControl.invalid" color="warn">Please fill this field.</div>
 
     <br />
 
     Assignee:
 
-    <md-input name="assignee" placeholder="Assignee" required
+    <md-input name="assignee" placeholder="Assignee" required minlength="6"
         [(ngModel)]="assignee"
+        #assigneeControl="ngModel"
     ></md-input>
+
+    <div *ngIf="assigneeControl.invalid" color="warn">Please fill this field. Minimum 6 characters.</div>
 
     <br />
 
