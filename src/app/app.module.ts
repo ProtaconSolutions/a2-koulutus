@@ -7,6 +7,7 @@ import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import { TodoComponent } from './todo/todo.component';
+import { TodoService } from "./todo.service";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { TodoComponent } from './todo/todo.component';
     HttpModule,
     MaterialModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    TodoService
+  ],
   bootstrap: [
     AppComponent
   ]
