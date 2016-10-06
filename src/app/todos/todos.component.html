@@ -1,7 +1,7 @@
-<h1>{{title}}</h1>
+<h1>{{title}} ({{todoItems.length}})</h1>
 
 <ul>
   <li *ngFor="let todoItem of todoItems">
-    {{todoItem.name}}
+    {{todoItem.name}} (done: {{todoItem.done ? 'yes' : 'no'}})
   </li>
 </ul>

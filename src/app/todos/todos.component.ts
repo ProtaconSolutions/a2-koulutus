@@ -9,8 +9,14 @@ export class TodosComponent implements OnInit {
   private title: string = 'Todo Application';
 
   private todoItems: any[] = [
-    {name: 'Code some stuff'},
-    {name: 'Refactor some stuff'},
+    {
+      name: 'Code some stuff',
+      done: true,
+    },
+    {
+      name: 'Refactor some stuff',
+      done: false,
+    },
   ];
 
   constructor() { }
