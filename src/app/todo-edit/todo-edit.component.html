@@ -1,13 +1,11 @@
 <p>
-  index: {{index}}
+    index: {{index}}
 
-  <br />
+    <md-input placeholder="Todo item" [(ngModel)]="todoItem.name"></md-input>
 
-  {{todoItem | json}}
+    <br />
 
-  <br />
-
-  <button md-raised-button color="primary"
-    [routerLink]="['/todos']"
-  >Back to todo list</button>
+    <button md-raised-button color="primary"
+        [routerLink]="['/todos']"
+    >Back to todo list</button>
 </p>
