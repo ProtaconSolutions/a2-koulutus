@@ -6,7 +6,7 @@
         #nameControl="ngModel"
     ></md-input>
 
-    <div *ngIf="nameControl.invalid" color="warn">Please fill this field.</div>
+    <div *ngIf="nameControl.invalid" class="error">Please fill this field.</div>
 
     <br />
 
@@ -17,7 +17,7 @@
         #assigneeControl="ngModel"
     ></md-input>
 
-    <div *ngIf="assigneeControl.invalid" color="warn">Please fill this field. Minimum 6 characters.</div>
+    <div *ngIf="assigneeControl.invalid" class="error">Please fill this field. Minimum 6 characters.</div>
 
     <br />
 
