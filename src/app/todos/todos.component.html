@@ -1,4 +1,4 @@
-<h1>{{title}} ({{todoItems.length}})</h1>
+<h1>{{title}} ({{getTodosByStatus(true).length}} / {{todoItems.length}})</h1>
 
 <ul>
   <li *ngFor="let todoItem of todoItems">

@@ -17,6 +17,10 @@ export class TodosComponent implements OnInit {
       name: 'Refactor some stuff',
       done: false,
     },
+    {
+      name: 'Deploy application',
+      done: false,
+    },
   ];
 
   constructor() { }
@@ -24,4 +28,9 @@ export class TodosComponent implements OnInit {
   ngOnInit() {
   }
 
+  getTodosByStatus(status) {
+    return this.todoItems.filter(item => {
+      return item.done === status;
+    })
+  }
 }
