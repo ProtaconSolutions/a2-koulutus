@@ -12,14 +12,17 @@ export class TodosComponent implements OnInit {
     {
       name: 'Code some stuff',
       done: true,
+      active: false,
     },
     {
       name: 'Refactor some stuff',
       done: false,
+      active: false,
     },
     {
       name: 'Deploy application',
       done: false,
+      active: false,
     },
   ];
 
