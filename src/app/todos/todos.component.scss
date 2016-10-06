@@ -1,13 +1,2 @@
 .todo-list {
-  li {
-    cursor: pointer;
-
-    &.hover {
-      background-color: lightcyan;
-    }
-
-    &.done {
-      text-decoration: line-through;
-    }
-  }
 }
