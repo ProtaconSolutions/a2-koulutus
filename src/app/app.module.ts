@@ -20,7 +20,11 @@ const routes = [
   {
     path: 'todos',
     component: TodosComponent,
-  }
+  },
+  {
+    path: 'todo-edit/:index',
+    component: TodoEditComponent,
+  },
 ];
 
 @NgModule({
