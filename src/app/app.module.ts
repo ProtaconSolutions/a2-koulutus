@@ -12,26 +12,15 @@ import { TodoService } from './todo.service';
 
 const routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'todos',
+  },
+  {
     path: 'todos',
-    component: TodosComponent
+    component: TodosComponent,
   }
 ];
-
-/**
- path?: string;
- pathMatch?: string;
- component?: Type<any>;
- redirectTo?: string;
- outlet?: string;
- canActivate?: any[];
- canActivateChild?: any[];
- canDeactivate?: any[];
- canLoad?: any[];
- data?: Data;
- resolve?: ResolveData;
- children?: Route[];
- loadChildren?: LoadChildren;
- */
 
 @NgModule({
   declarations: [
