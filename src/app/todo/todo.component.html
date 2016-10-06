@@ -4,6 +4,7 @@
     (mouseenter)="todoItem.active = true"
     (mouseleave)="todoItem.active = false"
     (click)="todoItem.done = !todoItem.done"
+    [routerLink]="['/todo-edit', index]"
 >
     {{index + 1}}.
     {{todoItem.name}} (done: {{todoItem.done ? 'yes' : 'no'}})
