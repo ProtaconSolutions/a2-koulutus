@@ -31,7 +31,7 @@ export class TodosComponent implements OnInit {
 
   ngOnInit() { }
 
-  getTodosByStatus(status) {
+  getTodosByStatus(status: boolean) {
     return this.todoItems.filter(item => {
       return item.done === status;
     })

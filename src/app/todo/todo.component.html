@@ -1,4 +1,4 @@
-<li
+<div
     [class.hover]="todoItem.active"
     [class.done]="todoItem.done"
     (mouseenter)="todoItem.active = true"
@@ -6,4 +6,4 @@
     (click)="todoItem.done = !todoItem.done"
 >
     {{todoItem.name}} (done: {{todoItem.done ? 'yes' : 'no'}})
-</li>
+</div>
