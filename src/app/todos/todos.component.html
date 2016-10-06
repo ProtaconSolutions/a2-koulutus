@@ -6,6 +6,7 @@
     [class.hover]="todoItem.active"
     (mouseenter)="todoItem.active = true"
     (mouseleave)="todoItem.active = false"
+    (click)="todoItem.done = !todoItem.done"
   >
     {{todoItem.name}} (done: {{todoItem.done ? 'yes' : 'no'}})
   </li>
