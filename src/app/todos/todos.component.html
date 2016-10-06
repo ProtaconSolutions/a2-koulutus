@@ -1,16 +1,5 @@
 <h1>{{title}} ({{getTodosByStatus(true).length}} / {{todoItems.length}})</h1>
 
 <ul class="todo-list">
-  <li
-    *ngFor="let todoItem of todoItems"
-    [class.hover]="todoItem.active"
-    [class.done]="todoItem.done"
-    (mouseenter)="todoItem.active = true"
-    (mouseleave)="todoItem.active = false"
-    (click)="todoItem.done = !todoItem.done"
-  >
-    {{todoItem.name}} (done: {{todoItem.done ? 'yes' : 'no'}})
-
-    <app-todo></app-todo>
-  </li>
+  <app-todo *ngFor="let todoItem of todoItems" [todoItem]="todoItem"></app-todo>
 </ul>

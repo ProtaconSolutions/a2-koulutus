@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.scss']
 })
+
 export class TodosComponent implements OnInit {
   private title: string = 'Todo Application';
 
@@ -28,8 +29,7 @@ export class TodosComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   getTodosByStatus(status) {
     return this.todoItems.filter(item => {
