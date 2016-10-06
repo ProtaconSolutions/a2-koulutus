@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
+  private todoItems: any[] = [
+    {name: 'Code some stuff'},
+    {name: 'Refactor some stuff'},
+  ];
 
   constructor() { }
 
