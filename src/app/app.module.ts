@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import { TodoComponent } from './todo/todo.component';
 import { TodoService } from './todo.service';
+import { TodoEditComponent } from './todo-edit/todo-edit.component';
 
 const routes = [
   {
@@ -26,7 +27,8 @@ const routes = [
   declarations: [
     AppComponent,
     TodosComponent,
-    TodoComponent
+    TodoComponent,
+    TodoEditComponent
   ],
   imports: [
     BrowserModule,
