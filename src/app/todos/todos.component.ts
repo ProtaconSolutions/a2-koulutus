@@ -27,6 +27,8 @@ export class TodosComponent implements OnInit {
     },
   ];
 
+  private name: string = '';
+
   constructor() { }
 
   ngOnInit() { }
@@ -35,5 +37,15 @@ export class TodosComponent implements OnInit {
     return this.todoItems.filter(item => {
       return item.done === status;
     })
+  }
+
+  addNewTodoItem() : void {
+    this.todoItems.push({
+      name: this.name,
+      done: false,
+      active: false,
+    });
+
+    this.name = '';
   }
 }

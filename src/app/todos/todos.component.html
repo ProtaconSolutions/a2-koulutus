@@ -8,3 +8,13 @@
     ></app-todo>
   </md-list-item>
 </md-list>
+
+
+<md-input placeholder="Add new todo item" [(ngModel)]="name"></md-input>
+
+<br />
+
+<button md-raised-button color="primary"
+  [disabled]="!name.length"
+  (click)="addNewTodoItem()"
+>Add new todo item</button>
