@@ -7,16 +7,19 @@ export class TodoService {
       name: 'Code some stuff',
       done: true,
       active: false,
+      assignee: 'John Doe',
     },
     {
       name: 'Refactor some stuff',
       done: false,
       active: false,
+      assignee: 'Arnold Administrator',
     },
     {
       name: 'Deploy application',
       done: false,
       active: false,
+      assignee: '',
     },
   ];
 
