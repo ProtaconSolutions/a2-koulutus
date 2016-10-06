@@ -1,0 +1,11 @@
+.todo-list {
+    li {
+        &.hover {
+            background-color: lightcyan;
+        }
+
+        &.done {
+            text-decoration: line-through;
+        }
+    }
+}
