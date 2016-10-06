@@ -25,4 +25,8 @@ export class TodoService {
   getTodoItems() {
     return this.todoItems;
   }
+
+  getTodoItemByIndex(index: number) {
+    return this.todoItems[index];
+  }
 }
