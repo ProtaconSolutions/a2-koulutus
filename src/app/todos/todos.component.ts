@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from '../todo.service';
 
 @Component({
   selector: 'app-todos',
@@ -8,30 +9,14 @@ import { Component, OnInit } from '@angular/core';
 
 export class TodosComponent implements OnInit {
   private title: string = 'Todo Application';
-
-  private todoItems: any[] = [
-    {
-      name: 'Code some stuff',
-      done: true,
-      active: false,
-    },
-    {
-      name: 'Refactor some stuff',
-      done: false,
-      active: false,
-    },
-    {
-      name: 'Deploy application',
-      done: false,
-      active: false,
-    },
-  ];
-
+  private todoItems: any[] = [];
   private name: string = '';
 
-  constructor() { }
+  constructor(private todoService: TodoService) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.todoItems = this.todoService.getTodoItems();
+  }
 
   getTodosByStatus(status: boolean) {
     return this.todoItems.filter(item => {
