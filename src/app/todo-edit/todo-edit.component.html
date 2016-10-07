@@ -1,31 +1,49 @@
 <form #todoEditForm="ngForm" (submit)="save()" novalidate>
-    Index: {{index}}
+    <div class="row padding">
+        <div class="col-xs-4">
+            <div class="box">
+                <md-input name="name" placeholder="Todo item" required
+                    [(ngModel)]="name"
+                    #nameControl="ngModel"
+                ></md-input>
 
-    <md-input name="name" placeholder="Todo item" required
-        [(ngModel)]="name"
-        #nameControl="ngModel"
-    ></md-input>
+                <div *ngIf="nameControl.invalid" class="error">Please fill this field.</div>
+            </div>
+        </div>
+    </div>
 
-    <div *ngIf="nameControl.invalid" class="error">Please fill this field.</div>
+    <div class="row padding">
+        <div class="col-xs-4">
+            <div class="box">
+                <md-input  name="assignee" placeholder="Assignee" required minlength="6"
+                    [(ngModel)]="assignee"
+                    #assigneeControl="ngModel"
+                ></md-input>
 
-    <br />
+                <div *ngIf="assigneeControl.invalid" class="error">Please fill this field. Minimum 6 characters.</div>
+            </div>
+        </div>
+    </div>
 
-    Assignee:
+    <div class="row padding">
+        <div class="col-xs-4">
+            <div class="box">
+                <md-checkbox name="done" [(ngModel)]="done">
+                    Item done
+                </md-checkbox>
+            </div>
+        </div>
+    </div>
 
-    <md-input name="assignee" placeholder="Assignee" required minlength="6"
-        [(ngModel)]="assignee"
-        #assigneeControl="ngModel"
-    ></md-input>
+    <div class="row padding">
+        <div class="col-xs-4">
+            <button type="submit" md-raised-button color="primary"
+                [disabled]="todoEditForm.invalid"
+            >Save todo item</button>
 
-    <div *ngIf="assigneeControl.invalid" class="error">Please fill this field. Minimum 6 characters.</div>
-
-    <br />
-
-    <button type="submit" md-raised-button color="primary"
-        [disabled]="todoEditForm.invalid"
-    >Save todo item</button>
-
-    <button md-raised-button color="primary"
-        [routerLink]="['/todos']"
-    >Back to todo list</button>
+            <button md-raised-button color="primary"
+                [routerLink]="['/todos']"
+            >Back to todo list</button>
+        </div>
+    </div>
 </form>

@@ -1,6 +1,6 @@
 <h1>{{title}} ({{getTodosByStatus(true).length}} / {{todoItems.length}})</h1>
 
-<md-list >
+<md-list>
   <md-list-item *ngFor="let todoItem of todoItems; let i = index">
     <app-todo
       [todoItem]="todoItem"
@@ -10,11 +10,21 @@
 </md-list>
 
 
-<md-input placeholder="Add new todo item" [(ngModel)]="name"></md-input>
+<div class="row padding">
+  <div class="col-xs-4">
+    <div class="box">
+      <md-input placeholder="Add new todo item" [(ngModel)]="name"></md-input>
+    </div>
+  </div>
+</div>
 
-<br />
-
-<button md-raised-button color="primary"
-  [disabled]="!name.length"
-  (click)="addNewTodoItem()"
->Add new todo item</button>
+<div class="row padding">
+  <div class="col-xs-4">
+    <div class="box">
+      <button md-raised-button color="primary"
+        [disabled]="!name.length"
+        (click)="addNewTodoItem()"
+      >Add new todo item</button>
+    </div>
+  </div>
+</div>
